@@ -79,7 +79,7 @@ public class MainController {
 		Mo.setCellValueFactory(calldata -> calldata.getValue().MoProperty());
 		V.setCellValueFactory(calldata -> calldata.getValue().VProperty());
 		
-		waterList.sorted();
+
 		waterTable.setItems(waterList);
 		waterTable.getSelectionModel().selectFirst();
 
