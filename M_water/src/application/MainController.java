@@ -27,11 +27,21 @@ public class MainController {
 	private waterV water = new waterV();
 	private waterDAO dao = new waterDAO();
 	private ObservableList<waterV> waterList = FXCollections.observableArrayList();
+	public ObservableList<String> nameList = FXCollections.observableArrayList("DMZ 평창수","강원평창수","백산수","볼빅","삼다수","석수","스파","아이시스","아이시스 8.0", "에비앙", "이로하스","천연수","풀무원 샘물");                                                            
+	public ObservableList<String> ingredList = FXCollections.observableArrayList("Mg","Ca","K","Na","SiO2","Mo","V","Ge","OI");                                                            
+	
+	
+	
 
 	@FXML
 	private ObservableList<waterV> data;
 	@FXML
 	private TableView<waterV> waterTable;
+
+	@FXML
+	private ComboBox<String> nameBOX;
+	@FXML
+	private ComboBox<String> ingredBOX;
 
 	@FXML
 	private TableColumn<waterV, String> Name;
@@ -60,13 +70,22 @@ public class MainController {
 	
 	@FXML
 	private TableColumn<waterV, Number> Ge;
+	
+	@FXML
+	private TableColumn<waterV, Number> OI;
+
 
 	@FXML
 	public void initialize() throws SQLException, IOException {
+		nameBOX.setItems(nameList); 
+		nameBOX.getSelectionModel().selectFirst();
+		
+		ingredBOX.setItems(ingredList); 
+		ingredBOX.getSelectionModel().selectFirst();
 
 		waterList.clear();
 
-		waterList = dao.loadProduct();
+		waterList = dao.loadProduct("NAME","");
 
 		Name.setCellValueFactory(calldata -> calldata.getValue().nameProperty());
 		Mg.setCellValueFactory(calldata -> calldata.getValue().MgProperty());
@@ -76,14 +95,27 @@ public class MainController {
 		SiO2.setCellValueFactory(calldata -> calldata.getValue().SiO2Property());
 		Mo.setCellValueFactory(calldata -> calldata.getValue().MoProperty());
 		V.setCellValueFactory(calldata -> calldata.getValue().VProperty());
+		Ge.setCellValueFactory(calldata -> calldata.getValue().GeProperty());
+		OI.setCellValueFactory(calldata -> calldata.getValue().OIProperty());
 		
-		waterList.sorted();
 		waterTable.setItems(waterList);
 		waterTable.getSelectionModel().selectFirst();
 
 	}
+	public void sort() throws SQLException, IOException {
+		waterList.clear();
+		
+		waterList = dao.loadProduct(ingredBOX.getValue(),"");
+		
+		waterTable.setItems(waterList);
+	}
 	
-	
+	public void serch() throws SQLException, IOException  {
+		waterList.clear();
+		waterList = dao.loadProduct("NAME",nameBOX.getValue());
+		
+		waterTable.setItems(waterList);
+	}
 
 
 }

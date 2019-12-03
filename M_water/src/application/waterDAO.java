@@ -11,9 +11,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class waterDAO {
-	public ObservableList<waterV> loadProduct() throws IOException, SQLException {
+	public ObservableList<waterV> loadProduct(String sort,String search) throws IOException, SQLException {
 
-		String sql = "select * from ingredient";
+		String sql = "select * from ingredient ORDER BY "+sort+" DESC";
 
 		Connection con = ConnectionUtil.getConnection();
 		PreparedStatement ps = con.prepareStatement(sql);
@@ -22,23 +22,44 @@ public class waterDAO {
 
 		ArrayList<waterV> waterList = new ArrayList<>();
 		ObservableList<waterV> waterObList = FXCollections.observableArrayList();
-
-		while (rs.next()) {
-			waterV productvo = new waterV();
-			productvo.setName(rs.getString("NAME"));		
-			productvo.setMg(rs.getFloat("Mg"));
-			productvo.setCa(rs.getFloat("Ca"));
-			productvo.setK(rs.getFloat("K"));
-			productvo.setNa(rs.getFloat("Na"));
-			productvo.setSiO2(rs.getFloat("SiO2"));
-			productvo.setMo(rs.getFloat("Mo"));
-			productvo.setV(rs.getFloat("V"));
-			productvo.setGe(rs.getFloat("Ge"));
-			productvo.setOI(rs.getFloat("OI"));
+		
+		if(search.equals("")) {
+			while (rs.next()) {
+				waterV productvo = new waterV();
+				productvo.setName(rs.getString("NAME"));		
+				productvo.setMg(rs.getFloat("Mg"));
+				productvo.setCa(rs.getFloat("Ca"));
+				productvo.setK(rs.getFloat("K"));
+				productvo.setNa(rs.getFloat("Na"));
+				productvo.setSiO2(rs.getFloat("SiO2"));
+				productvo.setMo(rs.getFloat("Mo"));
+				productvo.setV(rs.getFloat("V"));
+				productvo.setGe(rs.getFloat("Ge"));
+				productvo.setOI(rs.getFloat("OI"));
 			
-			waterList.add(productvo);
+				waterList.add(productvo);
+			}
 		}
-
+		else {
+			while (rs.next()) {
+				if(search.equals(rs.getString("NAME"))){
+					waterV productvo = new waterV();
+					productvo.setName(rs.getString("NAME"));		
+					productvo.setMg(rs.getFloat("Mg"));
+					productvo.setCa(rs.getFloat("Ca"));
+					productvo.setK(rs.getFloat("K"));
+					productvo.setNa(rs.getFloat("Na"));
+					productvo.setSiO2(rs.getFloat("SiO2"));
+					productvo.setMo(rs.getFloat("Mo"));
+					productvo.setV(rs.getFloat("V"));
+					productvo.setGe(rs.getFloat("Ge"));
+					productvo.setOI(rs.getFloat("OI"));
+				
+					waterList.add(productvo);
+				}
+			}
+			
+		}
 		waterObList.addAll(waterList);
 
 		rs.close();
