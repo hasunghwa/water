@@ -3,9 +3,17 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<<<<<<< HEAD
 
 <AnchorPane prefHeight="128.0" prefWidth="185.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="application.MainController">
    <children>
       <Button fx:id="btn2" layoutX="59.0" layoutY="42.0" mnemonicParsing="false" onAction="#P" stylesheets="@application/application.css" text="Button" />
    </children>
 </AnchorPane>
+=======
+<AnchorPane prefHeight="187.0" prefWidth="308.0" stylesheets="@application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+    <children>
+      <Button fx:id="btn" layoutX="116.0" layoutY="64.0" mnemonicParsing="false" onAction="#P" text="Button" />
+   </children>
+</AnchorPane>
+>>>>>>> refs/remotes/origin/master
