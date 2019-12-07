@@ -1,7 +1,3 @@
-/application/
-<<<<<<< HEAD
-=======
-/Next.fxml
+/Main.fxml
 /Prious.fxml
-/Test.fxml
->>>>>>> refs/remotes/origin/master
+/application/

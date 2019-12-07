@@ -1,31 +1,6 @@
 package application;
 
 import java.io.IOException;
-<<<<<<< HEAD
-
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
-
-public class MainController {
-
-	private Stage stage = StageStore.stage;
-	@FXML
-	private Button btn2;
-	
-	public void initialize(){
-	 
-	}
-	
-	public void P()throws IOException{
-		try {
-        	Parent main = FXMLLoader.load(getClass().getResource("/Prious.fxml"));
-        	Scene sc = new Scene(main,799,489);
-        	
-=======
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -54,7 +29,6 @@ public class MainController {
 	private Stage stage = StageStore.stage;
 	@FXML
 	private Button btn;
-	@FXML private AnchorPane subPage;
 	
 	public void initialize(){
 	 
@@ -64,7 +38,6 @@ public class MainController {
 		try {
         	Parent main = FXMLLoader.load(getClass().getResource("/Prious.fxml"));
         	Scene sc = new Scene(main);
->>>>>>> refs/remotes/origin/master
             stage.setScene(sc);
             stage.show();
             
