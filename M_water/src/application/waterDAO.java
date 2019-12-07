@@ -13,7 +13,7 @@ import javafx.collections.ObservableList;
 public class waterDAO {
 	public ObservableList<waterV> loadProduct(String sort,String search) throws IOException, SQLException {
 
-		String sql = "select * from ingredient ORDER BY "+sort+" DESC";
+		String sql = "select * from ingredient ORDER BY "+sort;
 
 		Connection con = ConnectionUtil.getConnection();
 		PreparedStatement ps = con.prepareStatement(sql);

@@ -28,16 +28,20 @@ import javafx.stage.Stage;
 public class MainController {
 	private Stage stage = StageStore.stage;
 	@FXML
-	private Button btn;
+	private Button b_water;
+	@FXML
+	private Button b_lank;
+	@FXML
+	private Button b_health;
 	
 	public void initialize(){
 	 
 	}
 	
-	public void P()throws IOException{
+	public void move_water()throws IOException{
 		try {
-        	Parent main = FXMLLoader.load(getClass().getResource("/Prious.fxml"));
-        	Scene sc = new Scene(main);
+        	Parent water = FXMLLoader.load(getClass().getResource("/Prious.fxml"));
+        	Scene sc = new Scene(water);
             stage.setScene(sc);
             stage.show();
             
@@ -45,6 +49,18 @@ public class MainController {
             e.printStackTrace();
         }	
 	}
+	public void move_lank()throws IOException{
+		try {
+        	Parent lank = FXMLLoader.load(getClass().getResource("/Lank.fxml"));
+        	Scene sc = new Scene(lank);
+            stage.setScene(sc);
+            stage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }	
+	}
+	public void move_health()throws IOException{
+	}
 }
-
 

@@ -4,15 +4,18 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.PerspectiveTransform?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="489.0" prefWidth="799.0" stylesheets="@application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SubController">
    <children>
-      <TableView fx:id="waterTable" layoutX="86.0" layoutY="137.0" prefHeight="304.0" prefWidth="660.0">
+      <TableView fx:id="waterTable" layoutX="20.0" layoutY="150.0" prefHeight="304.0" prefWidth="759.0">
         <columns>
-     	  	   <TableColumn fx:id="Name" prefWidth="72.0" text="품명" />
-       	 	   <TableColumn fx:id="Mg" minWidth="6.0" prefWidth="60.0" text="Mg" />
-        	   <TableColumn fx:id="Ca" prefWidth="75.0" text="Ca" /> 
+     	  	   <TableColumn fx:id="Name" maxWidth="10000.0" prefWidth="72.0" text="Name" />
+       	 	   <TableColumn fx:id="Mg" prefWidth="10.0" text="Mg" />
+        	   <TableColumn fx:id="Ca" prefWidth="42.0" text="Ca" /> 
        		   <TableColumn fx:id="K" prefWidth="75.0" text="K" />
        	       <TableColumn fx:id="Na" prefWidth="75.0" text="Na" />
        		   <TableColumn fx:id="SiO2" prefWidth="75.0" text="SiO2" />
@@ -25,10 +28,20 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button fx:id="serchButton" layoutX="298.0" layoutY="73.0" mnemonicParsing="false" onAction="#serch" text="찾기" />
-      <Button fx:id="sortButton" layoutX="580.0" layoutY="73.0" mnemonicParsing="false" onAction="#sort" text="정렬" />
-      <ComboBox fx:id="ingredBOX" layoutX="400.0" layoutY="73.0" prefWidth="150.0" />
-      <ComboBox fx:id="nameBOX" layoutX="104.0" layoutY="73.0" prefWidth="150.0" />
-      <Button fx:id="btn" layoutX="348.0" layoutY="28.0" mnemonicParsing="false" onAction="#movePage" text="Button" />
+      <Button fx:id="serchButton" layoutX="240.0" layoutY="74.0" mnemonicParsing="false" onAction="#serch" style="-fx-background-color: #3fc5f0;" text="Serch" />
+      <Button fx:id="sortButton" layoutX="706.0" layoutY="75.0" mnemonicParsing="false" onAction="#sort" style="-fx-background-color: #3fc5f0;" text="Sort" />
+      <ComboBox fx:id="ingredBOX" layoutX="526.0" layoutY="78.0" prefWidth="150.0">
+         <effect>
+            <Blend>
+               <topInput>
+                  <PerspectiveTransform />
+               </topInput>
+            </Blend>
+         </effect></ComboBox>
+      <ComboBox fx:id="nameBOX" layoutX="20.0" layoutY="77.0" prefHeight="37.0" prefWidth="190.0" />
+      <Button fx:id="btn" layoutX="706.0" layoutY="14.0" mnemonicParsing="false" onAction="#movePage" prefHeight="43.0" prefWidth="73.0" style="-fx-background-color: #3fc5f0;" styleClass="button3" text="안녕">
+         <font>
+            <Font name="NanumGothic Light" size="28.0" />
+         </font></Button>
    </children>
 </AnchorPane>

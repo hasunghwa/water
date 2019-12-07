@@ -21,7 +21,7 @@ public class SubController {
 	private waterV water = new waterV();
 	private waterDAO dao = new waterDAO();
 	private ObservableList<waterV> waterList = FXCollections.observableArrayList();
-	public ObservableList<String> nameList = FXCollections.observableArrayList("DMZ 평창수","강원평창수","백산수","볼빅","삼다수","석수","스파","아이시스","아이시스 8.0", "에비앙", "이로하스","천연수","풀무원 샘물");                                                            
+	public ObservableList<String> nameList = FXCollections.observableArrayList("ALL","DMZ 평창수","강원평창수","백산수","볼빅","삼다수","석수","스파","아이시스","아이시스 8.0", "에비앙", "이로하스","천연수","풀무원 샘물");                                                            
 	public ObservableList<String> ingredList = FXCollections.observableArrayList("Mg","Ca","K","Na","SiO2","Mo","V","Ge","OI");                                                            
 
 	@FXML
@@ -99,7 +99,7 @@ public class SubController {
 	public void sort() throws SQLException, IOException {
 		waterList.clear();
 		
-		waterList = dao.loadProduct(ingredBOX.getValue(),"");
+		waterList = dao.loadProduct(ingredBOX.getValue()+" DESC","");
 		
 		waterTable.setItems(waterList);
 		
@@ -107,7 +107,10 @@ public class SubController {
 	
 	public void serch() throws SQLException, IOException  {
 		waterList.clear();
-		waterList = dao.loadProduct("NAME",nameBOX.getValue());
+		if(nameBOX.getValue().equals("ALL")) {
+			waterList = dao.loadProduct("NAME","");
+		}
+		else waterList = dao.loadProduct("NAME",nameBOX.getValue());
 		
 		waterTable.setItems(waterList);
 	}
