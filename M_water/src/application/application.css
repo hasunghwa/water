@@ -1,4 +1,8 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.text{
+	-fx-font-size: 16pt;
+    -fx-font-family: "NanumGothic Light";
+}
 
 .background {
     -fx-background-color: #1d1d1d;
@@ -38,7 +42,7 @@
 .table-view .column-header, .table-view .filler {
     -fx-size: 35;
     -fx-border-width: 0 0 1 0;
-    -fx-background-color:  #c4d3f6;
+    -fx-background-color: #4d80e4;
     -fx-border-color:
         transparent
         transparent
@@ -134,6 +138,11 @@
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
 
 }
+.buttonhidden{
+	 -fx-background-color: white;
+	 -fx-border-style:none ;
+	 -fx-effect:null; 
+}
 .combo-box .list-cell 
 {
     -fx-background: white;
@@ -200,4 +209,30 @@
 
 .combo-box-base:disabled {
     -fx-opacity: .4;
+}
+
+/* Styling the slider track */
+.jfx-slider > .track {
+     -fx-background-color: #3fc5f0;
+}
+
+/* Styling the slider thumb */
+.jfx-slider > .thumb {
+     -fx-background-color: #3e64ff;
+}
+
+/* Styling the filled track */
+.jfx-slider > .colored-track {
+     -fx-background-color: #3e64ff;
+}
+
+/* Styling the animated thumb */
+.jfx-slider > .animated-thumb {
+     -fx-background-color: #3e64ff;
+}
+
+/* Styling the slider value text inside animated thumb */
+.jfx-slider .slider-value {
+     -fx-fill: white;
+     -fx-stroke: white;
 }

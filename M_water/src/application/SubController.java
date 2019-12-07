@@ -102,7 +102,6 @@ public class SubController {
 		waterList = dao.loadProduct(ingredBOX.getValue()+" DESC","");
 		
 		waterTable.setItems(waterList);
-		
 	}
 	
 	public void serch() throws SQLException, IOException  {

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="489.0" prefWidth="799.0" stylesheets="@application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SubController">
+<AnchorPane prefHeight="489.0" prefWidth="799.0" style="-fx-background-color: #dff6f0;" stylesheets="@application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SubController">
    <children>
       <TableView fx:id="waterTable" layoutX="20.0" layoutY="150.0" prefHeight="304.0" prefWidth="759.0">
         <columns>
@@ -39,7 +39,7 @@
             </Blend>
          </effect></ComboBox>
       <ComboBox fx:id="nameBOX" layoutX="20.0" layoutY="77.0" prefHeight="37.0" prefWidth="190.0" />
-      <Button fx:id="btn" layoutX="706.0" layoutY="14.0" mnemonicParsing="false" onAction="#movePage" prefHeight="43.0" prefWidth="73.0" style="-fx-background-color: #3fc5f0;" styleClass="button3" text="안녕">
+      <Button fx:id="btn" layoutX="683.0" layoutY="14.0" mnemonicParsing="false" onAction="#movePage" prefHeight="43.0" prefWidth="96.0" style="-fx-background-color: #4d80e4;" styleClass="button3" text="안녕">
          <font>
             <Font name="NanumGothic Light" size="28.0" />
          </font></Button>
