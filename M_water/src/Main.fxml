@@ -11,7 +11,7 @@
    <children>
       <VBox prefHeight="640.0" prefWidth="360.0">
          <children>
-            <Button fx:id="b_water" mnemonicParsing="false" onAction="#move_water" prefHeight="213.0" prefWidth="769.0" style="-fx-background-color: #3fc5f0;" styleClass="button2" text="Water">
+            <Button fx:id="b_water" mnemonicParsing="false" onAction="#move_water" prefHeight="213.0" prefWidth="769.0" style="-fx-background-color: #3fc5f0; -fx-font-family: &quot;Helvetica Condensed Bold&quot;;" styleClass="button2" text="WATER">
                <graphic>
                   <ImageView fitHeight="59.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -23,7 +23,7 @@
                   <Font name="Franklin Gothic Demi Cond" size="36.0" />
                </font>
             </Button>
-            <Button fx:id="b_lank" mnemonicParsing="false" onAction="#move_lank" prefHeight="213.0" prefWidth="784.0" style="-fx-background-color: #eef5b2;" styleClass="button2" text="Lank">
+            <Button fx:id="b_lank" mnemonicParsing="false" onAction="#move_lank" prefHeight="213.0" prefWidth="784.0" style="-fx-background-color: #eef5b2; -fx-font-family: &quot;Helvetica Condensed Bold&quot;;" styleClass="button2" text="LANK">
                <graphic>
                   <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -35,7 +35,7 @@
                   <Font name="Comic Sans MS Bold" size="36.0" />
                </font>
             </Button>
-            <Button fx:id="b_health" mnemonicParsing="false" onAction="#move_health" prefHeight="213.0" prefWidth="770.0" style="-fx-background-color: #ffc6c7;" styleClass="button2" text="Health">
+            <Button fx:id="b_health" mnemonicParsing="false" onAction="#move_health" prefHeight="213.0" prefWidth="770.0" style="-fx-background-color: #ffc6c7; -fx-font-family: &quot;Helvetica Condensed Bold&quot;;" styleClass="button2" text="HEALTH">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>

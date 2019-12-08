@@ -13,7 +13,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Font.loadFont(getClass().getResourceAsStream("Helvetica.ttf"),20);
+			Font.loadFont(getClass().getResourceAsStream("Helvetica Condensed Bold.ttf"),20);
 			Font.loadFont(getClass().getResourceAsStream("NotoSans-CondensedBold.ttf"),20);
 			Font.loadFont(getClass().getResourceAsStream("NotoSans-CondensedMedium.ttf"),20);
 			Font.loadFont(getClass().getResourceAsStream("NotoSans-Light.ttf"),20);

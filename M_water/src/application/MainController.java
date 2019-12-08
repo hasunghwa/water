@@ -51,7 +51,7 @@ public class MainController {
 	}
 	public void move_lank()throws IOException{
 		try {
-        	Parent lank = FXMLLoader.load(getClass().getResource("/Lank.fxml"));
+        	Parent lank = FXMLLoader.load(getClass().getResource("/Rank.fxml"));
         	Scene sc = new Scene(lank);
             stage.setScene(sc);
             stage.show();
@@ -61,7 +61,7 @@ public class MainController {
         }	
 	}
 	public void move_health()throws IOException{try {
-    	Parent water = FXMLLoader.load(getClass().getResource("/Prious.fxml"));
+    	Parent water = FXMLLoader.load(getClass().getResource("/Health.fxml"));
     	Scene sc = new Scene(water);
         stage.setScene(sc);
         stage.show();
