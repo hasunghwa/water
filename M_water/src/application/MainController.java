@@ -40,7 +40,7 @@ public class MainController {
 	
 	public void move_water()throws IOException{
 		try {
-        	Parent water = FXMLLoader.load(getClass().getResource("/Prious.fxml"));
+        	Parent water = FXMLLoader.load(getClass().getResource("/Water.fxml"));
         	Scene sc = new Scene(water);
             stage.setScene(sc);
             stage.show();
@@ -60,7 +60,15 @@ public class MainController {
             e.printStackTrace();
         }	
 	}
-	public void move_health()throws IOException{
+	public void move_health()throws IOException{try {
+    	Parent water = FXMLLoader.load(getClass().getResource("/Prious.fxml"));
+    	Scene sc = new Scene(water);
+        stage.setScene(sc);
+        stage.show();
+        
+    } catch (IOException e) {
+        e.printStackTrace();
+    }	
 	}
 }
 
