@@ -20,9 +20,11 @@ public class Main extends Application {
 			Font.loadFont(getClass().getResourceAsStream("BMHANNA.ttf"),20);
 			
 			StageStore.stage = primaryStage;
+			
 			Parent root = FXMLLoader.load(getClass().getResource("/Main.fxml"));
 			Scene scene = new Scene(root,360,640);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setTitle("Mineral water");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

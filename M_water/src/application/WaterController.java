@@ -179,6 +179,7 @@ public class WaterController extends Thread {
 		  try {
 	        	Parent main = FXMLLoader.load(getClass().getResource("/Main.fxml"));
 	        	Scene sc = new Scene(main);
+	        	stage.setTitle("Mineral water");
 	            stage.setScene(sc);
 	            stage.show();
 	            

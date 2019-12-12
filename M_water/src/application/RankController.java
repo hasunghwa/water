@@ -53,6 +53,9 @@ public class RankController implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		ingredBOX.setItems(ingredList); 
+		slider_rank1.setVisible(false);
+		slider_rank2.setVisible(false);
+		slider_rank3.setVisible(false);
 		
 		waterList.clear();
 
@@ -110,6 +113,7 @@ public class RankController implements Initializable{
 		  try {
 	        	Parent main = FXMLLoader.load(getClass().getResource("/Main.fxml"));
 	        	Scene sc = new Scene(main);
+	        	stage.setTitle("Mineral water");
 	            stage.setScene(sc);
 	            stage.show();
 	            
@@ -126,6 +130,9 @@ public class RankController implements Initializable{
 		rank1_name.setText(waterList.get(0).getName());
 		rank2_name.setText(waterList.get(1).getName());
 		rank3_name.setText(waterList.get(2).getName());
+		slider_rank1.setVisible(true);
+		slider_rank2.setVisible(true);
+		slider_rank3.setVisible(true);
 		
 		if(ingredBOX.getValue().equals("Mg")) {
 			slider_rank1.setMax(max_ingred[0]);

@@ -233,7 +233,32 @@
 }
 
 /* Styling the slider value text inside animated thumb */
-.jfx-slider .slider-value {
+.jfx-slider2 .slider-value {
+     -fx-fill: white;
+     -fx-stroke: white;
+}
+
+.jfx-slider2 > .track {
+     -fx-background-color: #ffd271;
+}
+
+/* Styling the slider thumb */
+.jfx-slider2 > .thumb {
+     -fx-background-color: #f65c78;
+}
+
+/* Styling the filled track */
+.jfx-slider2 > .colored-track {
+     -fx-background-color: #f65c78;
+}
+
+/* Styling the animated thumb */
+.jfx-slider2 > .animated-thumb {
+     -fx-background-color: #f65c78;
+}
+
+/* Styling the slider value text inside animated thumb */
+.jfx-slider2 .slider-value {
      -fx-fill: white;
      -fx-stroke: white;
 }

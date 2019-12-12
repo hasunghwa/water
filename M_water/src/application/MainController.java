@@ -42,7 +42,8 @@ public class MainController {
 		try {
         	Parent water = FXMLLoader.load(getClass().getResource("/Water.fxml"));
         	Scene sc = new Scene(water);
-            stage.setScene(sc);
+        	stage.setTitle("Water Ingredient");
+        	stage.setScene(sc);
             stage.show();
             
         } catch (IOException e) {
@@ -53,6 +54,7 @@ public class MainController {
 		try {
         	Parent lank = FXMLLoader.load(getClass().getResource("/Rank.fxml"));
         	Scene sc = new Scene(lank);
+        	stage.setTitle("Mineral Water Ranking");
             stage.setScene(sc);
             stage.show();
             
@@ -63,7 +65,8 @@ public class MainController {
 	public void move_health()throws IOException{try {
     	Parent water = FXMLLoader.load(getClass().getResource("/Health.fxml"));
     	Scene sc = new Scene(water);
-        stage.setScene(sc);
+    	stage.setTitle("Health Information");
+    	stage.setScene(sc);
         stage.show();
         
     } catch (IOException e) {
