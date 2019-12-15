@@ -26,12 +26,12 @@
             <Image url="@../../../../Users/성화/Desktop/work/프기프/image/제목.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="100.0" fitWidth="90.0" layoutX="47.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="342.0">
+      <ImageView fitHeight="100.0" fitWidth="90.0" layoutX="47.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="331.0">
          <image>
             <Image url="@../../../../Users/성화/Desktop/work/프기프/image/랭킹_1등.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="100.0" fitWidth="90.0" layoutX="48.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="100.0" fitWidth="90.0" layoutX="48.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Users/성화/Desktop/work/프기프/image/랭킹_2등.png" />
          </image>
@@ -42,14 +42,14 @@
          </image>
       </ImageView>
       <ComboBox fx:id="ingredBOX" layoutX="103.0" layoutY="107.0" onAction="#sort" prefHeight="35.0" prefWidth="155.0" promptText="ingredient" style="-fx-background-color: #fff3af;" AnchorPane.bottomAnchor="498.0" AnchorPane.topAnchor="107.0" />
-      <Text fx:id="rank1_name" layoutX="152.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" wrappingWidth="126.0" AnchorPane.bottomAnchor="416.0" />
+      <Text fx:id="rank1_name" layoutX="152.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" wrappingWidth="126.0" AnchorPane.bottomAnchor="411.0" />
       <Text fx:id="rank2_name" layoutX="152.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" wrappingWidth="126.0" AnchorPane.bottomAnchor="268.0" />
-      <Text fx:id="rank3_name" layoutX="152.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" wrappingWidth="126.0" />
+      <Text fx:id="rank3_name" layoutX="152.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" wrappingWidth="126.0" />
       <Text fx:id="rank1" layoutX="252.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" styleClass="text" textAlignment="CENTER" wrappingWidth="65.0" />
       <Slider fx:id="slider_rank2" disable="true" layoutX="152.0" layoutY="384.0" prefHeight="18.0" prefWidth="98.0" styleClass="jfx-slider2" />
       <Slider fx:id="slider_rank1" disable="true" layoutX="152.0" layoutY="241.0" prefHeight="18.0" prefWidth="98.0" styleClass="jfx-slider2" />
-      <Slider fx:id="slider_rank3" disable="true" layoutX="152.0" layoutY="549.0" prefHeight="18.0" prefWidth="98.0" styleClass="jfx-slider2" />
+      <Slider fx:id="slider_rank3" disable="true" layoutX="152.0" layoutY="543.0" prefHeight="18.0" prefWidth="98.0" styleClass="jfx-slider2" />
       <Text fx:id="rank2" layoutX="252.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" styleClass="text" textAlignment="CENTER" wrappingWidth="65.0" />
-      <Text fx:id="rank3" layoutX="252.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" styleClass="text" textAlignment="CENTER" wrappingWidth="65.0" />
+      <Text fx:id="rank3" layoutX="252.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" styleClass="text" textAlignment="CENTER" wrappingWidth="65.0" />
    </children>
 </AnchorPane>
